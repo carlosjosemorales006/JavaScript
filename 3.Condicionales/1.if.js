@@ -2,7 +2,8 @@
 
 let miNumero = 10;
 // revisar si el numero es positivo
-if (miNuemero > 0){
+if (miNumero > 0){
 
-print('Es numero es p')
+console.log('El numero es positivo')
 }
+
