@@ -44,3 +44,21 @@ for ( nombrePropiedad in persona){
         
     
 }
+
+// Forma de recorrer un objeto en el navegador
+// concatenar cada valor de cada propiedad
+
+console.log(persona.nombre + ', ' + persona.apellido + ', ' + persona.email + ', ' + persona.edad);
+
+// concatenar cada valor de cada propiedad con un ciclo for in
+
+for(nombrePropiedad in persona){
+    console.log(persona[nombrePropiedad]);
+}
+
+// recorrer un objeto con Object.values
+let personaArray= Object.values(persona);
+console.log(personaArray);
+// recorrer un objeto con stringify
+let personaString = JSON.stringify(persona);
+console.log(personaString);
