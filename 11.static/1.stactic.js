@@ -3,6 +3,8 @@ class Persona {
     // se usa la palabra reservada static para crear atributos estaticos
     static contadorObjetosPersona = 0;
 
+    email = 'Valor default email'; // atributo de nuestros objetos
+
     constructor(nombre, apellido){
         this._nombre = nombre;
         this._apellido = apellido
@@ -114,3 +116,9 @@ Empleado.saludar2(empleado1);
 
 console.log(Persona.contadorObjetosPersona);
 console.log(Empleado.contadorObjetosPersona);
+
+
+console.log(persona1.email);
+console.log(empleado1.email);
+console.log(Persona.email);
+console.log(Empleado.email);
