@@ -91,7 +91,7 @@ console.log(monitor1.toString());
 
 class Computadora{
 
-    static contadorComputadoras;
+    static contadorComputadoras = 0;
     constructor(nombre,monitor,teclado,raton){
         this._idComputador = ++Computadora.contadorComputadoras;
         this._nombre = nombre;
@@ -151,6 +151,47 @@ class Computadora{
 computadora1 = new Computadora('DELL',monitor1,teclado1,raton1);
 console.log(computadora1.toString());
 
+computadora2 = new Computadora('Lenovo',monitor1,teclado1,raton1);
+console.log(computadora1.toString());
 
+
+class Orden{
+    static contadorOrdenes = 0;
+    constructor(){
+        this._idOrden = ++Orden.contadorOrdenes;
+        this._computadores= [];
+
+    }
+
+    get idOrden(){
+        return this._idOrden;
+    }
+
+    agregarComputadora(computadora){
+        this._computadores.push(computadora)
+    }
+
+    mostrarOrden(){
+        let computadoresOrden = ' ';
+        for(let computadora of this._computadores){
+            computadoresOrden += `\n${this._computadores}`
+        }
+        console.log(`Orden: ${this._idOrden}, Computadoras: ${computadoresOrden}`)
+    }
+
+
+}
+
+let orden1 = new Orden();
+
+orden1.agregarComputadora(computadora1);
+orden1.agregarComputadora(computadora2)
+orden1.mostrarOrden()
+
+let orden2 = new Orden();
+
+orden2.agregarComputadora(computadora1);
+orden2.agregarComputadora(computadora2)
+orden2.mostrarOrden()
 
 
