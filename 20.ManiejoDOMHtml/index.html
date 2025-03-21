@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo DOM con JS</title>
+    <style>
+        .azul{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="azul" >Ejemplo DOM con JS</h1>
+    <p id="parrafo">Saludos</p>
+    <p class="azul">Elementos 2</p>
+    <p class="azul">Elementos 3</p>
+    <!--
+    // los scripts se pueden colocar en cualquier parte del documento
+    // pero es recomendable colocarlos al final del body
+    // para que el documento se cargue primero y luego se ejecute el script
+    // de esta manera se evita que el script se ejecute antes de que el documento se cargue
+    // y se genere un error-->
+    <script>
+        // seleccionar un elemento del DOM
+        // getElementById('id_del_elemento')
+        // getElementById es un metodo que se puede aplicar a cualquier elemento del DOM
+        // getElementById devuelve el elemento que tenga el id especificado
+        // aqui botenemos todo el objeto del elemento y luego podemos acceder a sus propiedades
+        let cabecero = document.getElementById('parrafo');
+        console.log(`Valor de cabecero: ${cabecero.innerHTML}`);
+
+        
+        let = Elementos = document.getElementById('parrafo');
+        console.log(`Valor de parrafo: ${Elementos.innerHTML}`);
+        
+        // cambiar el valor de un elemento del DOM
+        // para cambiar el valor de un elemento del DOM se puede acceder a la propiedad innerHTML
+        //Elementos.innerHTML = 'Nuevos valor del parrafo';
+        //cabecero.innerHTML = 'Nuevo valor del cabecero';
+
+        console.log('Saludos desde JS');
+    </script>
+
+    <script>
+        // seleccionar todos los elementos de un tipo h1
+
+        let Elementos = document.getElementsByTagName('h1');
+        console.log(` Numeros de Elementos ${Elementos.length}`);
+
+        for(let i = 0; i<Elementos.length; i++){
+            console.log(`Valor de parrafo ${i}: ${Elementos[i].innerHTML}`);
+        }   
+    </script>
+
+    <script>
+
+        // recupera todos los elementos que tengan la clase azul
+
+        let parrafis = document.getElementsByClassName('azul');
+        for(let elementos of parrafis){
+            console.log(`Valor de parrafo : ${elementos.innerHTML}`);
+        }
+    </script>
+
+    <script>
+
+        // recupero todos los elementos parrafos que tengan la clase azul
+        let prrafitoris = document.querySelectorAll('p.azul');
+        for(let elementos of prrafitoris){
+            console.log(`Valor de parrafo : ${elementos.innerHTML}`);
+        }
+
+        prrafitoris[0].innerHTML = 'Nuevo valor de parrafo';
+
+
+    </script>
+    
+</body>
+</html>    
